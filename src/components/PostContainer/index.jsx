@@ -3,7 +3,7 @@ import Post from '../Post/Post'
 import s from './style.module.sass'
 
 
-export default function PostContainer({posts, change_like, addComment}) {
+export default function PostContainer({posts, change_like, addComment, deletePosts, deleteComment}) {
   return (
     <div>
       {
@@ -12,6 +12,8 @@ export default function PostContainer({posts, change_like, addComment}) {
           key={post.id} {...post} 
           change_like={change_like} 
           addComment={addComment}
+          deletePosts={deletePosts}
+          deleteComment={deleteComment}
           />)
       }
     </div>
